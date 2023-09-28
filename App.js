@@ -14,7 +14,7 @@ const Tab = createBottomTabNavigator();
 // Componente para la barra de navegación común
 function MainTabs() {
   return (
-    <Tab.Navigator initialRouteName="Inicio" screenOptions={{ headerShown: false }}>
+    <Tab.Navigator initialRouteName="Inicio" backBehavior="initialRoute" screenOptions={{ headerShown: false }}>
       <Tab.Screen name="Tickets" component={Tickets} />
       <Tab.Screen name="Inicio" component={Main} />
       <Tab.Screen name="Notifications" component={Notifications} />
