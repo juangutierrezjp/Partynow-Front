@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, Image, TouchableOpacity } from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
 
-const CustomButton = ({ imageSource, firstName, distance, stars }) => {
+const Card = ({ imageSource, firstName, distance, stars }) => {
   return (
     <TouchableOpacity
       style={{
@@ -42,4 +42,4 @@ const CustomButton = ({ imageSource, firstName, distance, stars }) => {
   );
 };
 
-export default CustomButton;
+export default Card;

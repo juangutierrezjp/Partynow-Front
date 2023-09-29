@@ -2,7 +2,6 @@ import React from "react";
 import { View, Text, TouchableHighlight } from "react-native";
 import Constants from "expo-constants";
 import { useNavigation } from "@react-navigation/native";
-import HomeMenu from "../components/HomeMenu";
 
 const Main = () => {
   const navigation = useNavigation();
@@ -18,7 +17,6 @@ const Main = () => {
         backgroundColor: "#E8E8E8",
       }}
     >
-      <HomeMenu />
       <TouchableHighlight
         onPress={goToBoliches}
         style={{
