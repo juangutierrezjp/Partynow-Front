@@ -9,10 +9,14 @@ const Boliches = () => {
       style={{
         marginTop: Constants.statusBarHeight,
         flex: 1,
-        backgroundColor: "white",
+        backgroundColor: "#E8E8E8",
       }}
     >
-      <Text>Bolichesaaaa</Text>
+      <Text
+        style={{ color: "#000000", fontSize: 20, marginLeft: 10, padding: 10 }}
+      >
+        Boliches
+      </Text>
       <View style={{ flex: 1, justifyContent: "top", alignItems: "center" }}>
         <CustomButton
           imageSource={{

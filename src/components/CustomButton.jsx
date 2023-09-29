@@ -9,11 +9,11 @@ const CustomButton = ({ imageSource, firstName, distance, stars }) => {
         flexDirection: "row",
         alignItems: "center",
         padding: 10,
-        borderWidth: 3,
-        borderColor: "#ccc",
-        borderRadius: 15,
-        backgroundColor: "#D9D9D9",
-        marginHorizontal: 5,
+        borderWidth: 1,
+        borderColor: "#F5F5F5",
+        borderRadius: 5,
+        backgroundColor: "white",
+        marginHorizontal: 15,
         marginVertical: 2,
       }}
     >
