@@ -7,7 +7,7 @@ const Tickets = ()=>{
 
     return(
         <View style={{marginTop:Constants.statusBarHeight, flex:1, backgroundColor:"gray"}}>
-            <Text>tckets de re pana</Text>
+            <Text> tickets de re pana</Text>
         </View>
     )
 
