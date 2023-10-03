@@ -3,7 +3,7 @@ import { View, Text } from "react-native";
 import Constants from "expo-constants";
 import Card from "../components/Card"; // Corregimos la ruta del componente
 
-const Boliches = () => {
+const Locals = () => {
   return (
     <View
       style={{
@@ -39,4 +39,4 @@ const Boliches = () => {
   );
 };
 
-export default Boliches;
+export default Locals;
