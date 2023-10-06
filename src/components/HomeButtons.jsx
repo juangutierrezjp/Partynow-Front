@@ -80,15 +80,15 @@ const styles = StyleSheet.create({
   },
     image1: {
       width: 180,
-      height: 180,
+      height: 190,
     },
     image2: {
-        width: 190,
+        width: 185,
         height: 90,
       },
       image3: {
         width: 380,
-        height: 100,
+        height: 105,
         
       },
     text: {

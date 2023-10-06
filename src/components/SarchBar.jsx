@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import { View, StyleSheet } from "react-native";
 import { Input } from "@ui-kitten/components";
 import Icon from "react-native-vector-icons/MaterialIcons";
+import { useTheme } from "@ui-kitten/components";
 
 const InputSimpleUsageShowcase = () => {
   const [value, setValue] = useState("");
+  const theme= useTheme()
 
   return (
     <View style={styles.container}>
@@ -15,7 +17,7 @@ const InputSimpleUsageShowcase = () => {
         value={value}
         onChangeText={(nextValue) => setValue(nextValue)}
       />
-      <Icon name="search" size={30} color="black" style={styles.icon} />
+      <Icon name="search" size={30} color="#ffffff" style={{...styles.icon, backgroundColor:theme["primaryColor1"]}} />
     </View>
   );
 };
@@ -28,9 +30,6 @@ const styles = StyleSheet.create({
   },
   input: {
     flex: 1,
-  },
-  textStyle: {
-    color: "gray",
   },
   icon: {
     backgroundColor: "#8A1E94",
