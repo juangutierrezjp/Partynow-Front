@@ -21,14 +21,14 @@ const Navbar=()=> {
         options={({ navigation }) => ({
           tabBarShowLabel: false,
           tabBarIcon: ({ color, size }) => (
-            <FontAwesome5 name="ticket-alt" color={navigation.isFocused() ? theme['primaryColor1'] : 'gray'} size={23} />
+            <FontAwesome5 name="ticket-alt" color={navigation.isFocused() ? theme['primary1'] : 'gray'} size={23} />
           ),
         })}/>
         <Tab.Screen name="Inicio" component={MainStackScreen} 
         options={({ navigation }) => ({
           tabBarShowLabel: false,
           tabBarIcon: ({ color, size }) => (
-            <MaterialIcons name="home" color={navigation.isFocused() ? theme['primaryColor1'] : 'gray'} size={30} />
+            <MaterialIcons name="home" color={navigation.isFocused() ? theme['primary1'] : 'gray'} size={30} />
           ),
         })}/>
         <Tab.Screen name="Notifications" component={Notifications}
@@ -36,7 +36,7 @@ const Navbar=()=> {
         options={({ navigation }) => ({
           tabBarShowLabel: false,
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="notifications" color={navigation.isFocused() ? theme['primaryColor1'] : 'gray'} size={25} />
+            <Ionicons name="notifications" color={navigation.isFocused() ? theme['primary1'] : 'gray'} size={25} />
           ),
         })}/>
       </Tab.Navigator>
