@@ -1,6 +1,6 @@
 export const Tickets1 = [
     {
-      name: "Primer evento",
+      name: "Primer evento",  q
       date: "23/05/23",
       time: "23:30-05:00",
       photo: "https://example.com/imagen1.jpg",
