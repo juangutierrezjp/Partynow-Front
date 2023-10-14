@@ -4,6 +4,7 @@ import { useNavigation } from "@react-navigation/native";
 import { View, Image, Text, StyleSheet, ScrollView } from 'react-native';
 import { TouchableOpacity } from 'react-native';
 import { Tickets1 } from '../Hardcoded';
+import Ticket from './Ticket';
 
 
 const TicketContainer = ()=>{
@@ -27,18 +28,18 @@ if(list==="Loading"){
         <ScrollView>
             {list.map((element)=>{
                 return(
-                    <View key={element.id}>
-                    <Text key={element.name}>
-                    {element.name}
-                    </Text>
-                    <Text>
-                    {element.date}
-                    </Text>
-                    <Text >
-                    {element.time}
-                    </Text>
-                    </View>
                     
+                    <Ticket style={{marginTop:200}}
+                    key={element.eventId}
+                    name={element.name} 
+                    photo={element.photo} 
+                    date={element.date} 
+                    time={element.time} 
+                    eventId={element.eventId}
+                    organizer={element.Organizer}
+                    verified={element.Verified}
+                    type={element.type}
+                    />
                 )
             })}
 
