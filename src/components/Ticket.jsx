@@ -6,12 +6,52 @@ import { Fontisto } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons'; 
 import { FontAwesome5 } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
+import ShimmerPlaceHolder from 'react-native-shimmer-placeholder'
 
-const Ticket=({name, date, time, photo, eventId, organizer, verified, type})=>{
+
+
+
+const Ticket=({loading, name, date, time, photo, eventId, organizer, verified, type})=>{
+  
+  if (loading) {
+    return (
+
+    <Card style={{ marginTop: 5, marginBottom:5, width:"100%"}}>
+    <Card.Cover source={{ uri:photo }} style={styles.cover}/>
+        <Card.Content style={styles.content}>
+          <Title style={styles.title}>
+          <ShimmerPlaceHolder autoRun={true} visible={!loading} style={{ width: 150, height: 10 }}/>
+      </Title>
+          <Paragraph style={{color:"white"}}>
+            
+            <Text style={styles.subtitle}>
+            <ShimmerPlaceHolder autoRun={true} visible={!loading} style={{ width: 100, height: 10 }}/>
+            </Text>
+            
+        </Paragraph>
+        <View style={styles.alts}>
+        <View style={styles.description}>
+          <ShimmerPlaceHolder autoRun={true} visible={!loading} style={{ width: 50, height: 10 }}/>
+        </View>
+
+        <View style={styles.description}>
+        <ShimmerPlaceHolder autoRun={true} visible={!loading} style={{ width: 50, height: 10 }}/>
+        </View>
+
+        <View style={styles.description}>
+        <ShimmerPlaceHolder autoRun={true} visible={!loading} style={{ width: 50, height: 10 }}/>
+        </View>
+
+        </View>
+        </Card.Content>
+      </Card>
+
+    );
+  } else {
   return (
     <TouchableOpacity>
     <View>
-    <Card style={{ marginBottom: 10, position: 'relative'}}>
+    <Card style={{ marginBottom: 5, marginTop:5, position: 'relative'}}>
     <Card.Cover source={{ uri:photo }} style={styles.cover}/>
         <Card.Content style={styles.content}>
           <Title style={styles.title}>{name}</Title>
@@ -46,7 +86,7 @@ const Ticket=({name, date, time, photo, eventId, organizer, verified, type})=>{
       </Card>
     </View>
     </TouchableOpacity>
-  );
+  );}
 }
 
 const styles = StyleSheet.create({
