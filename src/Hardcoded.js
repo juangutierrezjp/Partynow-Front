@@ -151,4 +151,13 @@ export const Tickets1 = [
     }
   ];
 
-export const Tickets2 = []
+export const Tickets2 = [    {
+  name: "Primer evento",  
+  date: "23/05/23",
+  time: "23:30-05:00",
+  photo: "https://images.unsplash.com/photo-1556035511-3168381ea4d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
+  eventId: "radomUUID1",
+  Organizer: "FlowParty",
+  Verified: true,
+  type: "Común"
+}]
