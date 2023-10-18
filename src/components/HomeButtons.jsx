@@ -1,18 +1,16 @@
 import React from 'react';
 import { useNavigation } from "@react-navigation/native";
 import { View, Image, Text, StyleSheet } from 'react-native';
-import { TouchableHighlight,TouchableOpacity } from 'react-native';
+import { TouchableOpacity } from 'react-native';
+import ShimmerPlaceHolder from 'react-native-shimmer-placeholder'
 
 
 
 const HomeButtons = ({local, events, organizers, explore, descriptions}) => {
     const navigation = useNavigation();
   const goLocals = (e) => {
-    
     navigation.navigate("Locals"); // Reemplaza 'Screen1' con el nombre de tu primera vista
   };
-
- 
 
   return (
     <>
@@ -74,7 +72,7 @@ const styles = StyleSheet.create({
     touchable3:{
       justifyContent: 'center',
       alignItems: 'center',
-      height:90,
+      height:105,
       width:"90%",
       marginTop:15
   },
@@ -88,7 +86,7 @@ const styles = StyleSheet.create({
       },
       image3: {
         width: 380,
-        height: 105,
+        height: 107,
         
       },
     text: {

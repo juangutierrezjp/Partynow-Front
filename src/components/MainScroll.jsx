@@ -1,25 +1,39 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { useNavigation } from "@react-navigation/native";
 import { View, Text, ScrollView, RefreshControl } from 'react-native';
 import { TouchableOpacity } from 'react-native';
-import { Tickets1, Tickets2 } from '../Hardcoded';
+import { Tickets1, Tickets2, Locals1 } from '../Hardcoded';
 import Ticket from './Ticket';
+import HomeButtons from './HomeButtons';
+import { HomeButtonsDataset } from '../Hardcoded';
 import { Octicons } from '@expo/vector-icons';
+import DataDisplays from './DataDisplays';
+import ForYou from './ForYou';
 
 
-const TicketContainer = ()=>{
+const MainScroll = ()=>{
 const [refreshing, setRefreshing] = useState(false);
 const [data, setData] = useState([]);
 const [monted, setMonted] = useState(false);
+const [date, setDate] = useState("")
+const [time, setTime] = useState("")
+
+
+const getCurrentTime = () => {
+    const currentDateTime = new Date();
+    const options = { hour12: false };
+    const currentDate = currentDateTime.toLocaleDateString('es-ES', options);
+    const currentTime = currentDateTime.toLocaleTimeString('es-ES', options);
+    setDate(currentDate)
+    setTime(currentTime)
+  };
 
 const handleRefresh = () => {
     setRefreshing(true);
-
-
+    getCurrentTime()
     // Simularemos una solicitud con un retraso de 2 segundos.
     setTimeout(() => { 
-      setData(Tickets1);
+      setData(Locals1);
       setRefreshing(false);
     }, 2000);
   }
@@ -66,26 +80,15 @@ const handleRefresh = () => {
                 <View>
                 <TouchableOpacity onPress={()=>{setData([])}}>
             <Text  style={{textAlign: 'center', fontSize:15, color:"grey", marginBottom:10}}>
-             click to kill tickets
+             click to response error
             </Text>
                 </TouchableOpacity>
                 <View>
-                {data.map((element)=>{
-                    return(
-                        <Ticket style={{marginTop:200}}
-                        key={element.eventId}
-                        name={element.name} 
-                        photo={element.photo} 
-                        date={element.date} 
-                        time={element.time} 
-                        eventId={element.eventId}
-                        organizer={element.Organizer}
-                        verified={element.Verified}
-                        type={element.type}
-                        />
-                        )
-                    })}
-                    </View>
+                <HomeButtons local={HomeButtonsDataset[0]} events={HomeButtonsDataset[1]} organizers={HomeButtonsDataset[2]} explore={HomeButtonsDataset[3]} descriptions={HomeButtonsDataset[4]} />
+                </View>
+                <View>
+                    <ForYou data={data} time={time} date={date}/>
+                </View>
                     </View>
           )}
         </ScrollView>
@@ -93,4 +96,4 @@ const handleRefresh = () => {
     )
 }
 
-export default TicketContainer
+export default MainScroll
