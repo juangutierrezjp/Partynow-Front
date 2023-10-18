@@ -161,3 +161,31 @@ export const Tickets2 = [    {
   Verified: true,
   type: "Común"
 }]
+
+export const Locals1 = [{
+  name: "La Roka",  
+  nextDate: "18/10/2023",
+  NextTime: "17:10-05:30",
+  CoverPhoto: "https://pbs.twimg.com/media/CoHROpsXgAAoLkF.jpg",
+  ProfilePhoto:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1bxRsPxZ20mnILti8hMNJ4RwLyILrc-wrBA&usqp=CAU",
+  localId: "radomUUID1",
+  score:"4.6",
+  Organizer: "FlowParty",
+  Verified: true,
+  type: "local"
+}]
+
+export const Events1 = [{
+  name: "Babylon",  
+  date: "23/05/23",
+  time: "23:30-05:00",
+  photo: "https://images.unsplash.com/photo-1556035511-3168381ea4d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
+  eventId: "radomUUID1",
+  Organizer: "FlowParty",
+  Verified: true,
+  type: "Común"
+}]
+
+export const HomeButtonsDataset=[
+  "LOCALES", "EVENTOS", "ORGANIZADORES", "EXPLORAR", ["locales oficiales", "fiestas, previas, presentaciones", "Los mejores perfiles de la zona", "Accede rápidamente a Boliches y Eventos"]
+]
