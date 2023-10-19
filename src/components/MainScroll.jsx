@@ -31,6 +31,7 @@ const getCurrentTime = () => {
 const handleRefresh = () => {
     setRefreshing(true);
     getCurrentTime()
+    setData([])
     // Simularemos una solicitud con un retraso de 2 segundos.
     setTimeout(() => { 
       setData(Locals1);
