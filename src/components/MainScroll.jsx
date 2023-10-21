@@ -96,5 +96,4 @@ const handleRefresh = () => {
         </>
     )
 }
-
 export default MainScroll
