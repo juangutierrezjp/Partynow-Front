@@ -12,6 +12,7 @@ const DataDisplays=({loading, size, type, width, height, date, time, props})=>{
   const [status,setStatus]=useState("")
   
   useEffect(() => {
+    
     if(type==="local"){
       if(date===props.nextDate){
         if (compareHorario(props.NextTime, time)===true){
