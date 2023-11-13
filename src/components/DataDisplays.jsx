@@ -33,8 +33,8 @@ const DataDisplays=({loading, size, type, width, height, date, time, props})=>{
   }, [time]);
     return (
         <>
-        {type==="local" &&
-        <TouchableWithoutFeedback>
+        {type==="local" && // LOCALS DISPLAY
+        <TouchableWithoutFeedback >
         <Card style={{ marginBottom: 5, marginTop:5, position: 'relative', width:width, height:height}}>
         <Card.Cover source={{ uri:props.CoverPhoto }} style={{width:"100%", height:height, position:"absolute"}}/>
         <Card.Content style={{...styles.content, width:width, height:height/2, top:height/2}}>
@@ -78,6 +78,8 @@ const DataDisplays=({loading, size, type, width, height, date, time, props})=>{
             </Card.Content>
           </Card>
         </TouchableWithoutFeedback>}
+
+
         </>
       );
 
