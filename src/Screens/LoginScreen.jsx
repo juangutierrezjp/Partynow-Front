@@ -103,7 +103,7 @@ const LoginScreen = () => {
             <Button
               title="Olvidaste tú contraseña"
               onPress={handleForgotPassword}
-              style={{ opacity: "2" }}
+              style={{ backgroundColor: "" }}
             />
             <Button title="Iniciar sesión" onPress={handleLogin} />
             <Button
