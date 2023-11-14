@@ -3,8 +3,11 @@ import { View, Text } from "react-native";
 import Constants from "expo-constants";
 import Card from "../components/Card"; // Corregimos la ruta del componente
 import InputSimpleUsageShowcase from "../components/SarchBar";
+import { useNavigation } from "@react-navigation/native";
 
 const Locals = () => {
+  const navigation = useNavigation();
+
   return (
     <View
       style={{
@@ -29,7 +32,12 @@ const Locals = () => {
           date="04/05/2024"
           distance="3.5"
           location="Mi casa"
+          onPress={() => {
+            navigation.navigate("Details");
+          }}
+          name="Details"
         />
+
         <Card
           imageSource={{
             uri: "https://viapais.com.ar/resizer/Q0-7t4AZiZdry4y-pRVCpyDh1ZM=/980x640/smart/filters:quality(75):format(webp)/cloudfront-us-east-1.images.arcpublishing.com/grupoclarin/6VZREZL32NA5TB5UBTMYYALDLI.jpg",

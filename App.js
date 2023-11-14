@@ -1,27 +1,29 @@
-import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-import Navbar from './src/components/Navbar';
-import * as eva from '@eva-design/eva';
-import { ApplicationProvider} from '@ui-kitten/components';
-import { light } from './src/themes';
-
-
-
+import React from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
+import Navbar from "./src/components/Navbar";
+import * as eva from "@eva-design/eva";
+import { ApplicationProvider } from "@ui-kitten/components";
+import { light } from "./src/themes";
+import LoginScreen from "./src/Screens/LoginScreen"; // Asegúrate de importar tu pantalla de inicio de sesión
 
 const Stack = createStackNavigator();
-function App() {
 
+function App() {
   return (
     <>
-    <ApplicationProvider {...eva} theme={light}>
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="MainTabs" screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="NavigationBar" component={Navbar} />
-       {/* Pantallas sin barra de navegación */}
-      </Stack.Navigator>
-    </NavigationContainer>
-    </ApplicationProvider>
+      <ApplicationProvider {...eva} theme={light}>
+        <NavigationContainer>
+          <Stack.Navigator
+            initialRouteName="Login"
+            screenOptions={{ headerShown: false }}
+          >
+            <Stack.Screen name="Login" component={LoginScreen} />
+            <Stack.Screen name="NavigationBar" component={Navbar} />
+            {/* Agrega otras pantallas según sea necesario */}
+          </Stack.Navigator>
+        </NavigationContainer>
+      </ApplicationProvider>
     </>
   );
 }

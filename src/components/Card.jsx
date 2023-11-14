@@ -10,6 +10,7 @@ const Card = ({
   location,
   date,
   stars,
+  onPress,
 }) => {
   let backgroundColor = "white";
   let typeOfParty = (
@@ -34,7 +35,6 @@ const Card = ({
 
   // Convertimos a minúsculas para hacer la comparación sin importar mayúsculas o minúsculas
   if (party.toLowerCase() !== "boliche") {
-    backgroundColor = "#FFF3C9"; // Cambia a tu color deseado
     typeOfParty = (
       <View>
         <View style={{ flexDirection: "row", alignItems: "center" }}>
@@ -49,21 +49,22 @@ const Card = ({
   }
   return (
     <TouchableOpacity
+      onPress={onPress}
       style={{
         flexDirection: "row",
         alignItems: "center",
-        padding: 10,
+        padding: 5,
         borderWidth: 1,
         borderColor: "#F5F5F5",
-        borderRadius: 5,
+        borderRadius: 20,
         backgroundColor: backgroundColor,
-        marginHorizontal: 15,
+        marginHorizontal: 17,
         marginVertical: 2,
       }}
     >
       <Image
         source={imageSource}
-        style={{ width: 70, height: 70, borderRadius: 5, marginRight: 10 }}
+        style={{ width: 75, height: 75, borderRadius: 17, marginRight: 10 }}
       />
       <View style={{ flex: 1 }}>
         <Text style={{ fontWeight: "bold" }}>{firstName}</Text>
