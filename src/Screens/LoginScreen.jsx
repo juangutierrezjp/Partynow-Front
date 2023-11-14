@@ -60,16 +60,50 @@ const LoginScreen = () => {
             borderRadius: 20,
           }}
         >
-          <View style={{ margin: 20 }}>
-            <Text style={{ color: "white" }}>Email</Text>
-            <TextInput placeholder="Ingrese su correo electrónico o nombre" />
+          <View
+            style={{
+              margin: 20,
+            }}
+          >
+            <Text
+              style={{
+                color: "#343434",
+              }}
+            >
+              Email
+            </Text>
+            <TextInput
+              placeholder="Ingrese su correo electrónico o nombre"
+              style={{
+                backgroundColor: "white",
+                color: "#8B8181",
+                padding: 10,
+                fontSize: 12,
+                borderRadius: 13,
+                fontStyle: "italic",
+                marginVertical: 10,
+              }}
+            />
 
-            <Text style={{ color: "white" }}>Contraseña</Text>
-            <TextInput placeholder="Ingrese tu contraseña" secureTextEntry />
+            <Text style={{ color: "#343434" }}>Contraseña</Text>
+            <TextInput
+              placeholder="Ingrese tu contraseña"
+              secureTextEntry
+              style={{
+                backgroundColor: "white",
+                color: "#8B8181",
+                padding: 10,
+                fontSize: 12,
+                borderRadius: 13,
+                fontStyle: "italic",
+                marginVertical: 10,
+              }}
+            />
 
             <Button
-              title="Olvidé mi contraseña"
+              title="Olvidaste tú contraseña"
               onPress={handleForgotPassword}
+              style={{ opacity: "2" }}
             />
             <Button title="Iniciar sesión" onPress={handleLogin} />
             <Button
