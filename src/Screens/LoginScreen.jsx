@@ -1,8 +1,10 @@
 // screens/LoginScreen.js
 import React from "react";
-import { View, Text, TextInput, Button } from "react-native";
+import { View, Text, TextInput, Button, Image } from "react-native";
 import Constants from "expo-constants";
 import { useNavigation } from "@react-navigation/native";
+import Logo from "../../assets/logo.png";
+import { LinearGradient } from "expo-linear-gradient";
 const LoginScreen = () => {
   const navigation = useNavigation();
 
@@ -30,27 +32,55 @@ const LoginScreen = () => {
   };
 
   return (
-    <View
+    <LinearGradient
+      colors={["#FFA865", "#D55A4B", "#6A1372"]}
       style={{
         marginTop: Constants.statusBarHeight,
         flex: 1,
         backgroundColor: "#E8E8E8",
         padding: 10,
-        alignItems: "center", // Centrar verticalmente en el eje Y
-        justifyContent: "center", // Ajustar si es necesario
+        alignItems: "center",
+        justifyContent: "center",
       }}
     >
-      <Text>Correo electrónico:</Text>
-      <TextInput placeholder="Ingrese su correo electrónico" />
+      <View style={{ alignItems: "center", justifyContent: "center" }}>
+        <Image
+          source={Logo}
+          style={{
+            width: 197.72,
+            height: 120.84,
+          }}
+        />
+        <LinearGradient
+          colors={["#DDEBF9", "#FF29EA"]}
+          start={{ x: 0, y: 0 }}
+          end={{ x: 1, y: 1 }}
+          style={{
+            padding: 20,
+            borderRadius: 20,
+          }}
+        >
+          <View style={{ margin: 20 }}>
+            <Text style={{ color: "white" }}>Email</Text>
+            <TextInput placeholder="Ingrese su correo electrónico o nombre" />
 
-      <Text>Contraseña:</Text>
-      <TextInput placeholder="Ingrese su contraseña" secureTextEntry />
+            <Text style={{ color: "white" }}>Contraseña</Text>
+            <TextInput placeholder="Ingrese tu contraseña" secureTextEntry />
 
-      <Button title="Olvidé mi contraseña" onPress={handleForgotPassword} />
-      <Button title="Iniciar sesión" onPress={handleLogin} />
-      <Button title="Iniciar sesión con Google" onPress={handleGoogleLogin} />
-      <Button title="Registrarse" onPress={handleRegister} />
-    </View>
+            <Button
+              title="Olvidé mi contraseña"
+              onPress={handleForgotPassword}
+            />
+            <Button title="Iniciar sesión" onPress={handleLogin} />
+            <Button
+              title="Iniciar sesión con Google"
+              onPress={handleGoogleLogin}
+            />
+            <Button title="Registrarse" onPress={handleRegister} />
+          </View>
+        </LinearGradient>
+      </View>
+    </LinearGradient>
   );
 };
 
