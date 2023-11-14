@@ -13,6 +13,7 @@ import Constants from "expo-constants";
 import { useNavigation } from "@react-navigation/native";
 import Logo from "../../assets/logo.png";
 import Line from "../../assets/Line.png";
+import LogoGoogle from "../../assets/googleLogo.png";
 import { LinearGradient } from "expo-linear-gradient";
 const LoginScreen = () => {
   const navigation = useNavigation();
@@ -123,10 +124,28 @@ const LoginScreen = () => {
               />
             </View>
 
-            <Button
-              title="Iniciar sesión con Google"
+            <TouchableOpacity
               onPress={handleGoogleLogin}
-            />
+              style={{
+                flexDirection: "row",
+                alignItems: "center",
+                justifyContent: "center", // Centrar el contenido horizontalmente
+                backgroundColor: "white",
+                padding: 7,
+                width: 230,
+                borderRadius: 13,
+              }}
+            >
+              <Image
+                source={LogoGoogle}
+                style={{
+                  width: 30,
+                  height: 30,
+                  marginRight: 10, // Agregado para dar espacio entre la imagen y el texto
+                }}
+              />
+              <Text style={{ color: "#343434" }}>Continuar con Google</Text>
+            </TouchableOpacity>
             <TouchableOpacity onPress={handleRegister} style={{}}>
               <Text style={styles.textWhite}>
                 ¿Aun no eres parte? Registrate Gratis
