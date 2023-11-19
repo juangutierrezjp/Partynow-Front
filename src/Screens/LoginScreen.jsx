@@ -118,7 +118,7 @@ const LoginScreen = () => {
                 source={Line}
                 style={{ padding: 1, margin: 20, width: 100 }}
               />
-              <Text style={{ color: "white" }}>o</Text>
+              <Text style={{ color: "white", fontStyle: "italic" }}>o</Text>
               <Image
                 source={Line}
                 style={{ padding: 1, margin: 20, width: 100 }}
