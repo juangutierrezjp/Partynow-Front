@@ -39,6 +39,7 @@ const LoginScreen = () => {
   const handleRegister = () => {
     // Implementar la lógica de registro aquí
     console.log("Registrarse");
+    navigation.navigate("Register");
   };
 
   return (

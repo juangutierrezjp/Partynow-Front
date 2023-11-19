@@ -6,7 +6,7 @@ import * as eva from "@eva-design/eva";
 import { ApplicationProvider } from "@ui-kitten/components";
 import { light } from "./src/themes";
 import LoginScreen from "./src/Screens/LoginScreen"; // Asegúrate de importar tu pantalla de inicio de sesión
-
+import RegisterScreen from "./src/Screens/RegisterScreen";
 const Stack = createStackNavigator();
 
 function App() {
@@ -19,6 +19,7 @@ function App() {
             screenOptions={{ headerShown: false }}
           >
             <Stack.Screen name="Login" component={LoginScreen} />
+            <Stack.Screen name="Register" component={RegisterScreen} />
             <Stack.Screen name="NavigationBar" component={Navbar} />
             {/* Agrega otras pantallas según sea necesario */}
           </Stack.Navigator>
