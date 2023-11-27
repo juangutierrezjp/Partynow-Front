@@ -165,8 +165,8 @@ export const Tickets2 = [    {
 export const Locals1 = [
   {"name":"Bienvenido","format":"vertical","data":[{
   name: "La Roka",  
-  nextDate: "20/10/2023",
-  NextTime: "17:30-21:08",
+  nextDate: "26/11/2023",
+  NextTime: "21:30-22:08",
   CoverPhoto: "https://pbs.twimg.com/media/CoHROpsXgAAoLkF.jpg",
   ProfilePhoto:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1bxRsPxZ20mnILti8hMNJ4RwLyILrc-wrBA&usqp=CAU",
   localId: "larokaid",
@@ -316,6 +316,26 @@ export const Locals1 = [
 ]},
 
 ]
+
+export const DetailsLaroka={
+  type:"local",
+  id:"uuidLaroka",
+  name:"La Roka",
+  verified:true,
+  nextDate: "26/11/2023",
+  NextTime: "21:30-22:08",
+  CoverPhoto: "https://pbs.twimg.com/media/CoHROpsXgAAoLkF.jpg",
+  ProfilePhoto:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1bxRsPxZ20mnILti8hMNJ4RwLyILrc-wrBA&usqp=CAU",
+  popular:true,
+  score:"4.6",
+  Organizer: "Salta Roka",
+  verified:true,
+  description:"La disco Más grande del norte argentino",
+  photos:["https://res.cloudinary.com/do6zlglwn/image/upload/v1700932034/329349443_795885598566336_415128592286428332_n_jhyezm.jpg","https://res.cloudinary.com/do6zlglwn/image/upload/v1700932075/60213076_2316706051713114_5360559462505512960_n_m9fpy1.jpg", "https://res.cloudinary.com/do6zlglwn/image/upload/v1700932075/60213076_2316706051713114_5360559462505512960_n_m9fpy1.jpg", "https://res.cloudinary.com/do6zlglwn/image/upload/v1700932193/1993c392d24666e1d18fe842d7eb666b_pac9ch.jpg", "https://res.cloudinary.com/do6zlglwn/image/upload/v1700932219/55943829_2252364741480579_45333860845617152_n_hcacmv.jpg"],
+  location:"https://maps.app.goo.gl/RYdanXk5aBigfkGLA",
+
+
+}
 
 export const Events1 = [{
   name: "Babylon",  
