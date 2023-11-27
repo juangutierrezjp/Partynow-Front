@@ -416,34 +416,63 @@ export const HomeButtonsDataset = [
 ];
 
 export const notificationsData = {
-  today: [
+  groups: [
     {
-      avatar: "https://cdn-icons-png.flaticon.com/512/3135/3135768.png",
-      name: "Rodolfo",
-      title: "Dice",
-      text: "Texto muy largo",
-      time: "7hours",
+      period: "today",
+      title: "Hoy",
+      notifications: [
+        {
+          avatar: "https://cdn-icons-png.flaticon.com/512/3135/3135768.png",
+          name: "Rodolfo",
+          title: "Dice",
+          text: "Texto muy largo",
+          time: "7hours",
+        },
+        {
+          avatar: "https://cdn-icons-png.flaticon.com/512/3135/3135768.png",
+          name: "Rodolfo",
+          title: "Dice",
+          text: "Texto muy largo",
+          time: "7hours",
+        },
+        // Puedes agregar más notificaciones de hoy si es necesario
+      ],
     },
-    // Puedes agregar más notificaciones de hoy si es necesario
-  ],
-  yesterday: [
     {
-      avatar: "https://cdn-icons-png.flaticon.com/512/3135/3135768.png",
-      name: "Rodolfo",
-      title: "Dice",
-      text: "Texto muy largo",
-      time: "7hours",
+      period: "yesterday",
+      title: "Ayer",
+      notifications: [
+        {
+          avatar: "https://cdn-icons-png.flaticon.com/512/3135/3135768.png",
+          name: "Rodolfo",
+          title: "Dice",
+          text: "Texto muy largo",
+          time: "7hours",
+        },
+        // Puedes agregar más notificaciones de ayer si es necesario
+      ],
     },
-    // Puedes agregar más notificaciones de ayer si es necesario
-  ],
-  last7days: [
     {
-      avatar: "https://cdn-icons-png.flaticon.com/512/3135/3135768.png",
-      name: "Rodolfo",
-      title: "Dice",
-      text: "Texto muy largo",
-      time: "7hours",
+      period: "last7days",
+      title: "Últimos 7 días",
+      notifications: [
+        {
+          avatar: "https://cdn-icons-png.flaticon.com/512/3135/3135768.png",
+          name: "Rodolfo",
+          title: "Dice",
+          text: "Texto muy largoaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          time: "7hours",
+        },
+        {
+          avatar: "https://cdn-icons-png.flaticon.com/512/3135/3135768.png",
+          name: "Rodolfo",
+          title: "Dice",
+          text: "Texto muy largooooooooooooooooooo",
+          time: "7hours",
+        },
+        // Puedes agregar más notificaciones de los últimos 7 días si es necesario
+      ],
     },
-    // Puedes agregar más notificaciones de los últimos 7 días si es necesario
+    // Puedes agregar más grupos de notificaciones si es necesario
   ],
 };
