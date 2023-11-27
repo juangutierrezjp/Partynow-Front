@@ -6,11 +6,12 @@ import { Ionicons } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
 import { compareHorario } from '../utilities';
 import ShimmerPlaceHolder from 'react-native-shimmer-placeholder'
-
+import { useNavigation } from "@react-navigation/native";
 
 const DataDisplays=({loading, size, type, width, height, date, time, props})=>{
   const [status,setStatus]=useState("")
-  
+  const navigation = useNavigation();
+
   useEffect(() => {
     
     if(type==="local"){
@@ -34,7 +35,10 @@ const DataDisplays=({loading, size, type, width, height, date, time, props})=>{
     return (
         <>
         {type==="local" && // LOCALS DISPLAY
-        <TouchableWithoutFeedback >
+        <TouchableWithoutFeedback           
+      onPress={() => {
+          navigation.navigate("LocalDetail", {date, time});
+        }}>
         <Card style={{ marginBottom: 5, marginTop:5, position: 'relative', width:width, height:height}}>
         <Card.Cover source={{ uri:props.CoverPhoto }} style={{width:"100%", height:height, position:"absolute"}}/>
         <Card.Content style={{...styles.content, width:width, height:height/2, top:height/2}}>

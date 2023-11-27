@@ -27,7 +27,6 @@ const getCurrentTime = () => {
     setDate(currentDate)
     setTime(currentTime)
   };
-
 const handleRefresh = () => {
     setRefreshing(true);
     getCurrentTime()
@@ -36,7 +35,7 @@ const handleRefresh = () => {
     setTimeout(() => { 
       setData(Locals1);
       setRefreshing(false);
-    }, 2000);
+    }, 1000);
   }
 
   useEffect(() => {
@@ -88,7 +87,13 @@ const handleRefresh = () => {
                 <HomeButtons local={HomeButtonsDataset[0]} events={HomeButtonsDataset[1]} organizers={HomeButtonsDataset[2]} explore={HomeButtonsDataset[3]} descriptions={HomeButtonsDataset[4]} />
                 </View>
                 <View>
-                    <ForYou data={data} time={time} date={date}/>
+                  {data.map((category)=>{
+                    return(
+                      <View>
+                      <ForYou format={category.format} name={category.name} data={category.data} time={time} date={date}/>
+                      </View>
+                    )
+                  })}
                 </View>
                     </View>
           )}
