@@ -7,6 +7,7 @@ import Details from "../Screens/Details";
 import Events from "../Screens/Events";
 import Organizers from "../Screens/Organizers";
 import Explore from "../Screens/Explore";
+import LocalDetails from "../Screens/DetailsView";
 
 const MainStackScreen = () => {
   return (
@@ -14,7 +15,7 @@ const MainStackScreen = () => {
       <MainStack.Screen name="Home" component={Main} />
       {/* Otras pantallas de Main Van Aqui */}
       <MainStack.Screen name="Locals" component={Locals} />
-      <MainStack.Screen name="Details" component={Details} />
+      <MainStack.Screen name="LocalDetail" component={LocalDetails} />
       <MainStack.Screen name="Events" component={Events} />
       <MainStack.Screen name="Organizers" component={Organizers} />
       <MainStack.Screen name="Explore" component={Explore} />
