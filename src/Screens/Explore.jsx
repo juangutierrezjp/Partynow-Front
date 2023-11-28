@@ -2,6 +2,8 @@ import React from "react";
 import { View, Text } from "react-native";
 import Constants from "expo-constants";
 import Card from "../components/Card"; // Corregimos la ruta del componente
+import MapView, { Marker } from 'react-native-maps';
+import StaticMap from "../components/StaticMap";
 
 const Explore = () => {
   return (
@@ -17,6 +19,7 @@ const Explore = () => {
       >
        Explorar
       </Text>
+      <StaticMap latitude={-24.8207734} longitude={-65.427048} name={"La roka"} description={"Boliche"}/>
     </View>
   );
 };
