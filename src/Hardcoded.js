@@ -422,18 +422,22 @@ export const notificationsData = {
       title: "Hoy",
       notifications: [
         {
-          avatar: "https://cdn-icons-png.flaticon.com/512/3135/3135768.png",
-          name: "Rodolfo",
-          title: "Dice",
-          text: "Texto muy largo",
-          time: "7hours",
+          avatar:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1bxRsPxZ20mnILti8hMNJ4RwLyILrc-wrBA&usqp=CAU",
+          name: "La Roka",
+          title: "¡Dice!",
+          text: "Entradas gratis hasta las 00:00hs",
+          time: "7 hours",
+          unread: true,
         },
         {
-          avatar: "https://cdn-icons-png.flaticon.com/512/3135/3135768.png",
-          name: "Rodolfo",
-          title: "Dice",
-          text: "Texto muy largo",
-          time: "7hours",
+          avatar:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1bxRsPxZ20mnILti8hMNJ4RwLyILrc-wrBA&usqp=CAU",
+          name: "La Roka",
+          title: "¡Dice!",
+          text: "Hoy fiesta de la espuma!",
+          time: "7 hours",
+          unread: true,
         },
         // Puedes agregar más notificaciones de hoy si es necesario
       ],
@@ -443,11 +447,13 @@ export const notificationsData = {
       title: "Ayer",
       notifications: [
         {
-          avatar: "https://cdn-icons-png.flaticon.com/512/3135/3135768.png",
-          name: "Rodolfo",
-          title: "Dice",
-          text: "Texto muy largo",
-          time: "7hours",
+          avatar:
+            "https://images.unsplash.com/photo-1556035511-3168381ea4d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
+          name: "Babylon",
+          title: "¡Dice!",
+          text: "Fiesta de disfraces en Babylon!",
+          time: "7 hours",
+          unread: true,
         },
         // Puedes agregar más notificaciones de ayer si es necesario
       ],
@@ -457,18 +463,22 @@ export const notificationsData = {
       title: "Últimos 7 días",
       notifications: [
         {
-          avatar: "https://cdn-icons-png.flaticon.com/512/3135/3135768.png",
-          name: "Rodolfo",
-          title: "Dice",
-          text: "Texto muy largoaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-          time: "7hours",
+          avatar:
+            "https://res.cloudinary.com/do6zlglwn/image/upload/v1700590707/305315371_584497083466834_9033754025271652428_n_skwg05.jpg",
+          name: "Bullet Salta",
+          title: "¡Dice!",
+          text: "Danza clasica toda la noche!",
+          time: "7 hours",
+          unread: true,
         },
         {
-          avatar: "https://cdn-icons-png.flaticon.com/512/3135/3135768.png",
-          name: "Rodolfo",
-          title: "Dice",
-          text: "Texto muy largooooooooooooooooooo",
-          time: "7hours",
+          avatar:
+            "https://images.unsplash.com/photo-1556035511-3168381ea4d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
+          name: "Babylon",
+          title: "¡Dice!",
+          text: "Fernet gratis toda la noche para el mejor disfraz!",
+          time: "7 hours",
+          unread: true,
         },
         // Puedes agregar más notificaciones de los últimos 7 días si es necesario
       ],
