@@ -333,6 +333,8 @@ export const DetailsLaroka={
   description:"La disco Más grande del norte argentino",
   photos:["https://res.cloudinary.com/do6zlglwn/image/upload/v1700932034/329349443_795885598566336_415128592286428332_n_jhyezm.jpg","https://res.cloudinary.com/do6zlglwn/image/upload/v1700932075/60213076_2316706051713114_5360559462505512960_n_m9fpy1.jpg", "https://res.cloudinary.com/do6zlglwn/image/upload/v1700932075/60213076_2316706051713114_5360559462505512960_n_m9fpy1.jpg", "https://res.cloudinary.com/do6zlglwn/image/upload/v1700932193/1993c392d24666e1d18fe842d7eb666b_pac9ch.jpg", "https://res.cloudinary.com/do6zlglwn/image/upload/v1700932219/55943829_2252364741480579_45333860845617152_n_hcacmv.jpg"],
   location:"https://maps.app.goo.gl/RYdanXk5aBigfkGLA",
+  latitude:-24.8207734,
+  longitude:-65.427048,
 
 
 }

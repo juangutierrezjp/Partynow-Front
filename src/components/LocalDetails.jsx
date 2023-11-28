@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, Image } from 'react-native';
+import { View, Text, StyleSheet, Image, TouchableOpacity, Linking } from 'react-native';
 import React from 'react';
 import { EvilIcons } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
@@ -6,12 +6,19 @@ import { compareHorario } from '../utilities';
 import { useState, useEffect } from 'react';
 import { useRoute } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons'
+import MapView, { Marker } from 'react-native-maps';
+import StaticMap from './StaticMap';
 
 const LocalDetails=({data})=>{
     const route = useRoute();
     const { params } = route;
     const { date, time } = params;
     const [status,setStatus]=useState("")
+    const handleMapPress = () => {
+        const { latitude, longitude } = location;
+        const url = `https://www.google.com/maps/search/?api=1&query=${latitude},${longitude}`;
+        Linking.openURL(url);
+      };
     useEffect(() => {
         if(data.type==="local"){
           if(date===data.nextDate){
@@ -84,13 +91,20 @@ const LocalDetails=({data})=>{
                     <Text style={{color:"#777777", fontSize:12}}>Abre el {data.nextDate} </Text>
                     </View>
                     }
-              </View>
-              
+              </View>             
             </View>
           </View>
         </View>
 
+        <View>
+            <Text>{data.description}</Text>
+        </View>
         
+        <View>
+        <StaticMap latitude={data.latitude} longitude={data.longitude} image={data.ProfilePhoto} name={data.name} description={data.boliche}/>
+        </View>
+
+
         </View>
       );
     };
