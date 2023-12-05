@@ -182,20 +182,20 @@ export const Tickets2 = [
 
 export const Locals1 = [
   {
-    name: "Bienvenido",
+    name: "Bienvenido",   //category
     format: "vertical",
-    data: [
+    data: [              //places
       {
-        name: "La Roka",
+        name: "La Roka",  //localName
         nextDate: "26/11/2023",
-        NextTime: "21:30-22:08",
-        CoverPhoto: "https://pbs.twimg.com/media/CoHROpsXgAAoLkF.jpg",
-        ProfilePhoto:
+        NextTime: "21:30-22:08",  //nextTime
+        CoverPhoto: "https://pbs.twimg.com/media/CoHROpsXgAAoLkF.jpg", //coverPhoto
+        ProfilePhoto: //profilePhoto
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1bxRsPxZ20mnILti8hMNJ4RwLyILrc-wrBA&usqp=CAU",
         localId: "larokaid",
         score: "4.6",
-        Organizer: "FlowParty",
-        Verified: true,
+        Organizer: "FlowParty", //organizer
+        Verified: true,  //verifield
         type: "local",
       },
       {
@@ -386,8 +386,8 @@ export const DetailsLaroka = {
     "https://res.cloudinary.com/do6zlglwn/image/upload/v1700932219/55943829_2252364741480579_45333860845617152_n_hcacmv.jpg",
   ],
   location: "https://maps.app.goo.gl/RYdanXk5aBigfkGLA",
-  latitude: -24.8207734,
-  longitude: -65.427048,
+  latitude: -24.8207734, //String 
+  longitude: -65.427048,  //String
 };
 
 export const Events1 = [
