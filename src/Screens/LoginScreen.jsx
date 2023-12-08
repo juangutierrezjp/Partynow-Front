@@ -15,8 +15,20 @@ import Logo from "../../assets/logo.png";
 import Line from "../../assets/Line.png";
 import LogoGoogle from "../../assets/googleLogo.png";
 import { LinearGradient } from "expo-linear-gradient";
+import { useQuery, useMutation, gql } from "@apollo/client";
+
+const HELLO = gql`
+query Querytest {
+  hello
+}
+`
 const LoginScreen = () => {
   const navigation = useNavigation();
+  const { data, loading, error } = useQuery(HELLO);
+
+  if(!loading){
+    console.log("dentro del if",data)
+  }
 
   const handleLogin = () => {
     // Implementar la lógica de inicio de sesión real aquí
